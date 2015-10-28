@@ -20,7 +20,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "exchange";
 $dbname = "quti";
 
 // Create connection
@@ -29,8 +29,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-	$sql = "select * from profile	
-";
+	$sql = "select * from profile";
 $result = $conn->query($sql);
 
        if ($result->num_rows > 0) {

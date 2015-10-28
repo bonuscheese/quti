@@ -1,6 +1,6 @@
                         <?php
             //Establishing Connection with Server
-                        $connection = mysql_connect("localhost", "root", "");
+                        $connection = mysql_connect("localhost", "root", "exchange");
             //Selecting Database
                         $db = mysql_select_db("quti", $connection);
             //MySQL Query to read data
