@@ -30,11 +30,7 @@
             <tr>
               <td width="75" height="66">&nbsp;</td>
               <td width="364">City : 
-<?php
-          include 'result.inc';
-
-?>
-
+            <?php include 'result.inc'; ?>
 
               </td>
               </tr>
