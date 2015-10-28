@@ -1,0 +1,150 @@
+html, body {
+
+    background-image: url("../image/background.jpg");
+    margin: 0%;
+}
+
+header {
+  background-image: url("../image/logo.jpg");
+  height: 250px;
+}
+
+h1, h2 {
+  color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana,sans-serif;
+
+    width: 70%;
+    margin-right: auto  ;
+    margin-left: auto;
+    padding: 1% 2% 0%;
+    background: white;
+
+}
+h1 {
+    font: 1.6em "Times New Roman", Times, serif;
+    margin-bottom: .5cm;
+
+}
+h2 {
+    font: 3.2em "Times New Roman", Times, serif;
+    margin-bottom: .2cm;
+}
+
+
+
+footer {
+    border-top: 1px solid gray;
+    text-align: center;
+    font-size: .8em;
+    line-height: 4em;
+    margin-top: 1em;
+}
+
+img {
+
+	max-width:100%;
+
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+*, *:before, *:after {
+  -webkit-border-sizing: border-box;
+  -moz-border-sizing: border-box;
+  border-sizing: border-box;
+}
+
+.container {
+		max-width:100%;
+	width: 900px;
+
+}
+.container > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+
+.dropdown a {
+  text-decoration: none;
+}
+.dropdown [data-toggle="dropdown"] {
+  position: relative;
+  display: block;
+  color: white;
+  background: #2980B9;
+
+  padding: 10px;
+}
+.dropdown [data-toggle="dropdown"]:hover {
+  background: #2c89c6;
+}
+.dropdown .icon-arrow {
+  position: absolute;
+  display: block;
+  font-size: 0.7em;
+  color: #fff;
+  top: 14px;
+  right: 10px;
+}
+
+}
+
+.dropdown .icon-arrow:before {
+  content: '\25BC';
+}
+.dropdown .dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown .dropdown-menu li {
+  padding: 0;
+}
+.dropdown .dropdown-menu li a {
+  display: block;
+  color: #6e6e6e;
+  background: #EEE;
+  
+  padding: 10px 10px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: #black;
+  background: #EEE;
+  
+  padding: 10px 10px;
+}
+
+
+.dropdown .dropdown-menu li a:hover {
+  background: #f6f6f6;
+}
+.dropdown .show, .dropdown .hide {
+  -moz-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+.dropdown .show {
+  display: block;
+  max-height: 9999px;
+ 
+}
+.dropdown .hide {
+  max-height: 0;
+ }
+ 
+

@@ -1,0 +1,44 @@
+
+<?php 
+//load database connection
+// connect to fastapps 
+//$pdo = new PDO('mysql:host=fastapps04.qut.edu.au;dbname=n9106766', 'n9106766', '');
+
+// localhost 
+$pdo = new PDO('mysql:host=localhost;dbname=user_db', 'root', '');
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+// Search from MySQL database table
+$search=$_POST['search'];
+$query = $pdo->prepare("select * from 'park' where 'Suburb' LIKE '%$search%'  OR 'Street' LIKE '%$search%' LIMIT 0 , 10");
+$query->bindValue(1, "%$search%", PDO::PARAM_STR);
+$query->execute();
+          // Display search result
+         if (!$query->rowCount() == 0) {
+
+				echo "<table style=\"font-family:arial;\">";	
+                echo "<tr>
+                <td style=\"border-style:solid;border-width:1px;border-color:#0B829C;background:#82C5D4;\">ID</td>
+                <td style=\"border-style:solid;border-width:1px;border-color:#0B829C;background:#82C5D4;\"> Park Name</td>
+                <td style=\"border-style:solid;border-width:1px;border-color:#0B829C;background:#82C5D4;\"> Street</td>
+                <td style=\"border-style:solid;border-width:1px;border-color:#0B829C;background:#82C5D4;\"> Suburb</td>
+                </tr>";			
+          echo "Search result for: ".$search; 	
+            while ($results = $query->fetch()) {
+				echo "<tr><td style=\"border-style:solid;border-width:1px;border-color:#0B829C;\">";			
+                echo $results['id'];
+				echo "</td><td style=\"border-style:solid;border-width:1px;border-color:#0B829C;\">";
+                echo $results['Park Name'];
+                echo "</td><td style=\"border-style:solid;border-width:1px;border-color:#0B829C;\">";
+                echo $results['Street'];
+				echo "</td><td style=\"border-style:solid;border-width:1px;border-color:#0B829C;\">";
+                echo "".$results['Suburb'];
+				echo "</td></tr>";				
+            }
+				echo "</table>";		
+        } else {
+            echo 'Nothing is found in this database';
+        }
+
+?>

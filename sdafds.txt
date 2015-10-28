@@ -1,0 +1,2 @@
+http://stackoverflow.com/questions/6094552/how-to-fetch-data-from-database-and-display-it-in-php
+http://stackoverflow.com/questions/19934658/php-mysql-display-data-by-id-from-database-freedom-placement
